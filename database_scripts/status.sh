@@ -1,0 +1,1 @@
+sudo mysql < sqlstatus.sql

@@ -49,10 +49,9 @@ CREATE TABLE LM_Test (
 );
 
 CREATE TABLE Users (
-	USID int AUTO_INCREMENT,
 	Name varchar(255) NOT NULL,
 	Email varchar(255) NOT NULL,
-	Primary Key (USID)
+	Primary Key (Email)
 );
 
 
