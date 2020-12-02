@@ -8,7 +8,7 @@ Name
 Not NULL
 Tutorial_Text */
 CREATE TABLE LM_Module (
-MID int,
+MID int AUTO_INCREMENT,
 Name varchar(255) NOT NULL,
 Tutorial TEXT(65535) NOT NULL,
 PRIMARY KEY (MID)
@@ -22,7 +22,7 @@ PK
 Level_Num
 Not NULL */
 CREATE TABLE LM_Level (
-LID int NOT NULL,
+LID int AUTO_INCREMENT,
 MID int,
 Level varchar(255) NOT NULL,
 Primary key (LID),
@@ -39,7 +39,7 @@ Answers
 Content
 */
 CREATE TABLE LM_Test (
-    TID int NOT NULL,
+    TID int AUTO_INCREMENT,
     LID int NOT NULL,
     Questions TEXT(65535),
     Answers TEXT(65535),
@@ -48,7 +48,12 @@ CREATE TABLE LM_Test (
     Foreign Key (LID) References LM_Level(LID)
 );
 
-
+CREATE TABLE Users (
+	USID int AUTO_INCREMENT,
+	Name varchar(255) NOT NULL,
+	Email varchar(255) NOT NULL,
+	Primary Key (USID)
+);
 
 
 
