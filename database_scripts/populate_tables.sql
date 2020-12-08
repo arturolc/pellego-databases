@@ -1,2 +1,11 @@
 use pellego_database;
 INSERT INTO Users (Name, Email) Values('Joanna Lowry', 'joanna.lowry@gmail.com');
+INSERT INTO LM_Module (Name, Tutorial) VALUES('Rapid Serial Visual Presentation', 'This method of reading is known as “Rapid Serial Visual Presentation” or RSVP for short. 
+            Studies have shown the habit of internally “sounding out” (sub-vocalising) words is a limiting 
+            factor which prevents faster reading speeds from being obtained. RSVP eliminates the “sounding out” 
+            of words as individual words are not displayed long enough for sub-vocalisation to occur.');
+INSERT INTO LM_Module (Name, Tutorial) VALUES('Clump Reading', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam sit amet nulla sit amet efficitur. Pellentesque feugiat pharetra massa, quis malesuada felis molestie id. Ut id pulvinar felis. Nulla nec condimentum mauris. Nulla sed mi vulputate, dignissim lorem id, iaculis ex. Integer in nisl sed lacus ultrices tincidunt.');
+INSERT INTO LM_Module (Name, Tutorial) VALUES('Reducing Subvocalization', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam sit amet nulla sit amet efficitur. Pellentesque feugiat pharetra massa, quis malesuada felis molestie id. Ut id pulvinar felis. Nulla nec condimentum mauris. Nulla sed mi vulputate, dignissim lorem id, iaculis ex. Integer in nisl sed lacus ultrices tincidunt.');
+INSERT INTO LM_Module (Name, Tutorial) VALUES('Meta Guiding', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam sit amet nulla sit amet efficitur. Pellentesque feugiat pharetra massa, quis malesuada felis molestie id. Ut id pulvinar felis. Nulla nec condimentum mauris. Nulla sed mi vulputate, dignissim lorem id, iaculis ex. Integer in nisl sed lacus ultrices tincidunt.');
+INSERT INTO LM_Module (Name, Tutorial) VALUES('Pre-Reading', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam sit amet nulla sit amet efficitur. Pellentesque feugiat pharetra massa, quis malesuada felis molestie id. Ut id pulvinar felis. Nulla nec condimentum mauris. Nulla sed mi vulputate, dignissim lorem id, iaculis ex. Integer in nisl sed lacus ultrices tincidunt.');
+
