@@ -18,7 +18,7 @@ Answers \
 Conent 
 
 
-(Note: Hash refers to the hashed email that the application will send to the database) \     
+(Note: Hash refers to the hashed email that the application will send to the database)      
 User \
 UID: Primary Key \
 Hash: NOT NULL \
@@ -43,7 +43,8 @@ To save space and reduce user error (typos) the Status will be indicated by a si
 N: Not Started \
 P: Passed \
 F: Failed) \
-Test_Status
+
+Test_Status \
 TSID: Primary Key \
 UID: Foreign Key \
 TID: Foreign Key \
