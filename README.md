@@ -2,7 +2,7 @@ Learning Modules Schema
 
 Speed Reading Technique \
 SID: Primary Key \
-Name: NOT NULL \
+Name: NOT NULL 
 
 Tutorial_Text 
 
@@ -19,11 +19,11 @@ Answers \
 Conent 
 
 
-(Note: Code refers to the hashed email that the application will send to the database) \     
+(Note: Hash refers to the hashed email that the application will send to the database) \     
 User \
 UID: Primary Key \
-Code: NOT NULL \
-Name \
+Hash: NOT NULL \
+Name 
 
 (Note: The Status column for Level_Status indicates the completion status of the user. 
 There are three states: Not Started, In Progress, Completed. 
@@ -35,7 +35,7 @@ Level_Status
 LID: Primary Key \
 UID: Foreign Key \
 TID: Foreign Key \
-Status \
+Status 
 
 \
 (Note: The Status column for Test_Status indicates the completion status of the user. 
@@ -48,4 +48,4 @@ Test_Status
 TSID: Primary Key \
 UID: Foreign Key \
 TID: Foreign Key \
-Status \
+Status 
