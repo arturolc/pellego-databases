@@ -29,8 +29,9 @@ There are three states: Not Started, In Progress, Completed.
 To save space and reduce user error (typos) the Status will be indicated by a single capital letter as follows \
 N: Not Started \
 P: In Progress \
-C: Completed)\
-Level_Status 
+C: Completed)
+
+Level_Status  \
 LID: Primary Key \
 UID: Foreign Key \
 TID: Foreign Key \
