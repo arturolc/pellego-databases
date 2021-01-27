@@ -4,7 +4,7 @@ Speed Reading Technique \
 SID: Primary Key \
 Name: NOT NULL 
 
-Tutorial_Text \ 
+Tutorial_Text  
 Level \
 LID: Primary Key \
 SID: Foriegn Key \
