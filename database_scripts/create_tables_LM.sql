@@ -49,15 +49,42 @@ CREATE TABLE LM_Test (
 );
 
 CREATE TABLE Users (
+        UID int AUTO_INCREMENT,
 	Name varchar(255) NOT NULL,
 	Email varchar(255) NOT NULL,
-	Primary Key (Email)
+	Primary Key (UID)
 );
 
 
 
+Create TABLE Level_Status (
+LSID int AUTO_INCREMENT,
+UID int NOT NULL,
+LID int NOT NULL,
+Status char(1),
+Primary Key(LSID),
+Foreign Key (UID) References Users(UID),
+Foreign Key(LID) References LM_Level(LID)
+);
 
+Create TABLE Test_Status (
+TSID int AUTO_INCREMENT,
+UID int NOT NULL,
+TID int NOT NULL,
+Status int,
+Primary Key(TSID),
+Foreign Key (UID) References Users(UID),
+Foreign Key(TID) References LM_Test(TID)
+);
 
-
+reate TABLE User_Analytics (
+  AID int AUTO_INCREMENT,
+  UID int NOT NULL,
+  WordsReadToDate int,
+  Joined Datetime,
+  AvgWPM int,
+  Primary Key(AID),
+  Foreign Key (UID) References Users(UID),
+  );
 
 
