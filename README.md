@@ -38,12 +38,7 @@ TID: Foreign Key \
 Status 
 
 \
-(Note: The Status column for Test_Status indicates the completion status of the user. 
-There are three states: Not Started, Passed, and Failed. 
-To save space and reduce user error (typos) the Status will be indicated by a single capital letter as follows \
-N: Not Started \
-P: Passed \
-F: Failed) 
+(Note: The Status column indicates the current status of the test. A value of -1 means the test has not been taken) 
 
 Test_Status \
 TSID: Primary Key \
