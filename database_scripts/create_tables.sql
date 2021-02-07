@@ -77,14 +77,23 @@ Foreign Key (UID) References Users(UID),
 Foreign Key(TID) References LM_Test(TID)
 );
 
-reate TABLE User_Analytics (
+Create TABLE User_Analytics (
   AID int AUTO_INCREMENT,
   UID int NOT NULL,
   WordsReadToDate int,
   Joined Datetime,
   AvgWPM int,
   Primary Key(AID),
-  Foreign Key (UID) References Users(UID),
+  Foreign Key (UID) References Users(UID)
   );
 
+Create TABLE Library (
+ LID int AUTO_INCREMENT,
+ UID int NOT NULL,
+ Book_Name varchar(255) NOT NULL,
+ Author varchar(255) NOT NULL,
+ Content mediumtext NOT NULL,
+ Primary Key(LID),
+ Foreign Key (UID) References Users(UID)
+);
 
