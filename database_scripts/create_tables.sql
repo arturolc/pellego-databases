@@ -87,12 +87,6 @@ Create TABLE User_Analytics (
   Foreign Key (UID) References Users(UID)
   );
 
-Create TABLE Library (
-    UID INT NOT NULL,
-    BID INT NOT NULL,
-    FOREIGN KEY(UID) REFERENCES Users(UID),
-    FOREIGN KEY(BID) REFERENCES Books(BID)
-);
 
 CREATE TABLE Books (
     BID int AUTO_INCREMENT,
@@ -101,4 +95,11 @@ CREATE TABLE Books (
     Synopsis mediumtext NOT NULL,
     Url varchar(255) NOT NULL,
     PRIMARY KEY(BID));
+
+Create TABLE Library (
+    UID INT NOT NULL,
+    BID INT NOT NULL,
+    FOREIGN KEY(UID) REFERENCES Users(UID),
+    FOREIGN KEY(BID) REFERENCES Books(BID)
+);
 

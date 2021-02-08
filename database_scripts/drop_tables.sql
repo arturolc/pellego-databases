@@ -7,4 +7,4 @@ Use pellego_database;
    DROP TABLE Library;
    DROP TABLE User_Analytics;
    DROP TABLE Users;
-
+    DROP TABLE Books;
