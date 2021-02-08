@@ -88,12 +88,17 @@ Create TABLE User_Analytics (
   );
 
 Create TABLE Library (
- LID int AUTO_INCREMENT,
- UID int NOT NULL,
- Book_Name varchar(255) NOT NULL,
- Author varchar(255) NOT NULL,
- Content mediumtext NOT NULL,
- Primary Key(LID),
- Foreign Key (UID) References Users(UID)
+    UID INT NOT NULL,
+    BID INT NOT NULL,
+    FOREIGN KEY(UID) REFERENCES Users(UID),
+    FOREIGN KEY(BID) REFERENCES Books(BID)
 );
+
+CREATE TABLE Books (
+    BID int AUTO_INCREMENT,
+    Book_name varchar(255) NOT NULL,
+    Author VARCHAR(255) NOT NULL,
+    Synopsis mediumtext NOT NULL,
+    Url varchar(255) NOT NULL,
+    PRIMARY KEY(BID));
 
