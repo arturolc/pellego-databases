@@ -90,7 +90,7 @@ Create TABLE User_Analytics (
 
 CREATE TABLE Books (
     BID int AUTO_INCREMENT,
-    Book_name varchar(255) NOT NULL,
+    Book_Name varchar(255) NOT NULL,
     Author VARCHAR(255) NOT NULL,
     Synopsis mediumtext NOT NULL,
     Book_Url varchar(255) NOT NULL,
