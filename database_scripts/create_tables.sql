@@ -93,7 +93,8 @@ CREATE TABLE Books (
     Book_name varchar(255) NOT NULL,
     Author VARCHAR(255) NOT NULL,
     Synopsis mediumtext NOT NULL,
-    Url varchar(255) NOT NULL,
+    Book_Url varchar(255) NOT NULL,
+    Image_Url varchar(255) NOT NULL,
     PRIMARY KEY(BID));
 
 Create TABLE Library (
