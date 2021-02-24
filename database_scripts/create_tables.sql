@@ -1,80 +1,90 @@
-USE pellego_database;
-/* Speed reading technique table */
+use pellego_database;
+CREATE TABLE Users (
+        UID int AUTO_INCREMENT,
+        Name varchar(255) NOT NULL,
+        Email varchar(255) NOT NULL UNIQUE,
+        Primary Key (UID)
+);
 
-/* Speed Reading Technique
-MID
-PK
-Name
-Not NULL
-Tutorial_Text */
 CREATE TABLE LM_Module (
 MID int AUTO_INCREMENT,
 Name varchar(255) NOT NULL,
-Tutorial TEXT(65535) NOT NULL,
+Description TEXT(65535),
 PRIMARY KEY (MID)
 );
 
-/* Level
-LID
-FK
-SID
-PK
-Level_Num
-Not NULL */
-CREATE TABLE LM_Level (
-LID int AUTO_INCREMENT,
+CREATE TABLE LM_Intro(
+IID int AUTO_INCREMENT,
 MID int,
-Level varchar(255) NOT NULL,
-Primary key (LID),
+Header TEXT(65535),
+Content TEXT(65535),
+Primary Key(IID),
 Foreign Key (MID) References LM_Module(MID)
 );
 
-/*Test
-TID
-PK
-LID
-FK
-Questions
-Answers
-Content
-*/
-CREATE TABLE LM_Test (
-    TID int AUTO_INCREMENT,
-    LID int NOT NULL,
-    Questions TEXT(65535),
-    Answers TEXT(65535),
-    Content TEXT(65535),
-    Primary Key(TID, LID),
-    Foreign Key (LID) References LM_Level(LID)
-);
-
-CREATE TABLE Users (
-        UID int AUTO_INCREMENT,
-	Name varchar(255) NOT NULL,
-	Email varchar(255) NOT NULL,
-	Primary Key (UID)
+CREATE TABLE LM_Submodule (
+SMID int AUTO_INCREMENT,
+MID int,
+Name varchar(255) NOT NULL,
+Text TEXT(65535),
+Primary Key (SMID),
+Foreign Key (MID) References LM_Module(MID)
 );
 
 
-
-Create TABLE Level_Status (
-LSID int AUTO_INCREMENT,
-UID int NOT NULL,
-LID int NOT NULL,
-Status char(1),
-Primary Key(LSID),
-Foreign Key (UID) References Users(UID),
-Foreign Key(LID) References LM_Level(LID)
+CREATE TABLE LM_Quiz (
+QID int AUTO_INCREMENT,
+SMID int,
+Primary Key (QID),
+Foreign Key (SMID) References LM_Submodule(SMID)
 );
 
-Create TABLE Test_Status (
-TSID int AUTO_INCREMENT,
-UID int NOT NULL,
-TID int NOT NULL,
-Status int,
-Primary Key(TSID),
-Foreign Key (UID) References Users(UID),
-Foreign Key(TID) References LM_Test(TID)
+CREATE TABLE Questions
+(
+QUID int AUTO_INCREMENT,
+Quiz_ID int,
+Question TEXT(65535),
+Primary Key(QUID),
+Foreign Key (Quiz_ID) References LM_Quiz(QID)
+);
+
+CREATE TABLE Answers
+(
+AID int AUTO_INCREMENT,
+Question int,
+Correct Boolean,
+Primary Key(AID),
+Foreign Key (Question) References Questions(QUID)
+);
+
+CREATE TABLE Scores
+(
+SID int AUTO_INCREMENT,
+Quiz int,
+User int,
+Date_Taken DateTime,
+Primary Key (SID),
+Foreign Key (Quiz) References LM_Quiz(QID),
+Foreign Key (User) References Users(UID)
+);
+
+CREATE TABLE Intro_Status (
+ISID int AUTO_INCREMENT,
+UID int,
+Intro int NOT NULL,
+Completed Boolean,
+Primary Key (ISID),
+Foreign Key(UID) References Users (UID),
+Foreign Key (Intro) References LM_Intro (IID)
+);
+
+CREATE TABLE Average_WPM_History
+(
+WPMID int AUTO_INCREMENT,
+User int,
+Day DateTime,
+Primary Key (WPMID),
+Foreign Key (User) References Users(UID)
 );
 
 Create TABLE User_Analytics (
@@ -82,11 +92,9 @@ Create TABLE User_Analytics (
   UID int NOT NULL,
   WordsReadToDate int,
   Joined Datetime,
-  AvgWPM int,
   Primary Key(AID),
   Foreign Key (UID) References Users(UID)
   );
-
 
 CREATE TABLE Books (
     BID int AUTO_INCREMENT,
@@ -103,4 +111,3 @@ Create TABLE Library (
     FOREIGN KEY(UID) REFERENCES Users(UID),
     FOREIGN KEY(BID) REFERENCES Books(BID)
 );
-
