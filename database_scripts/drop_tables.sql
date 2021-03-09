@@ -12,3 +12,4 @@ Use pellego_database;
    Drop TABLE Library;
    DROP TABLE Users;
    DROP TABLE Books;
+   DROP TABLE Progress;

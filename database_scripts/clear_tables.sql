@@ -7,3 +7,4 @@ DELETE FROM Test_Status;
 DELETE FROM User_Analytics;
 DELETE FROM Library;
 DELETE FROM Users;
+DELETE FROM Progress;
