@@ -27,6 +27,7 @@ CREATE TABLE LM_Submodule (
 SMID int AUTO_INCREMENT,
 MID int,
 Name varchar(255) NOT NULL,
+Subheader varchar(255) NOT NULL,
 Text TEXT(65535),
 Primary Key (SMID),
 Foreign Key (MID) References LM_Module(MID)
