@@ -76,6 +76,33 @@ The legs are the long, muscular body parts that allow humans to move from one sp
 Arms are long, powerful body parts that are located on either side of chest, below the shoulders;arms are comprised of biceps (the thicker, more powerful upper portion), and forearms (the thinner, more flexible lower portion). Hands, or small, gripping body parts used for a tremendous number of actions, are at the end of arms. Each hand contains five fingers, or small appendages used to grip objects.
 The aforementioned shoulders are rounded body parts that aid arms\' flexibility. One\'s back is found on the opposite side of the stomach, and is a flat section of the body that contains important muscles that\'re intended to protect the lungs and other internal organs, in addition to helping humans perform certain motions and actions.");
 
+INSERT INTO Books (
+    Book_Name,
+    Author,
+    Synopsis,
+    Book_Url,
+    Image_Url)
+VALUES (
+    "Harry Potter and the Sorcerer Stone",
+    "J. K. Rowling",
+    "Harry Potter has no idea how famous he is. That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's really a wizard, just as his parents were. But everything changes when Harry is summoned to attend an infamous school for wizards, and he begins to discover some clues about his illustrious birthright. From the surprising way he is greeted by a lovable giant, to the unique curriculum and colorful faculty at his unusual school, Harry finds himself drawn deep inside a mystical world he never knew existed and closer to his own noble destiny.",
+    "https://pellego-library.s3-us-west-1.amazonaws.com/hp1/hp1.pdf",
+    "https://pellego-library.s3-us-west-1.amazonaws.com/hp1/hp1.png"
+);
+
+INSERT INTO Books (
+    Book_Name,
+    Author,
+    Synopsis,
+    Book_Url,
+    Image_Url)
+VALUES (
+    "The 7 Habits of Highly Effective People",
+    "Stephen R. Covey",
+    "In The 7 Habits of Highly Effective People, author Stephen R. Covey presents a holistic, integrated, principle-centered approach for solving personal and professional problems. With penetrating insights and pointed anecdotes, Covey reveals a step-by-step pathway for living with fairness, integrity, service, and human dignity--principles that give us the security to adapt to change and the wisdom and power to take advantage of the opportunities that change creates.",
+    "https://pellego-library.s3-us-west-1.amazonaws.com/Stephen+R.+Covey+-+The+7+Habits+of+Highly+Effective+People-Free+Press+(1990).pdf",
+    "https://pellego-library.s3-us-west-1.amazonaws.com/covey-7-habits.png"
+);
 
 
 
