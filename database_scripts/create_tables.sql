@@ -10,6 +10,7 @@ CREATE TABLE Users (
 CREATE TABLE LM_Module (
 MID int AUTO_INCREMENT,
 Name varchar(255) NOT NULL,
+Subheader varchar(255) not null,
 Description TEXT(65535),
 Icon varchar(255) NOT NULL,
 PRIMARY KEY (MID)
