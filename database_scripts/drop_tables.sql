@@ -5,11 +5,12 @@ Use pellego_database;
    DROP TABLE Answers;
    DROP TABLE Questions;
    DROP TABLE LM_Quiz;
-   DROP TABLE LM_Submodule;
    DROP TABLE Intro_Status;
    DROP TABLE LM_Intro;
-   DROP TABLE LM_Module;
    Drop TABLE Library;
-   DROP TABLE Users;
+   DROP TABLE ProgressCompleted;
+   DROP TABLE LM_Submodule;
+   DROP TABLE LM_Module;
    DROP TABLE Books;
-   DROP TABLE Progress;
+   DROP TABLE Users;
+   

@@ -116,7 +116,7 @@ Create TABLE Library (
     FOREIGN KEY(BID) REFERENCES Books(BID)
 );
 
-CREATE TABLE SubmodulesCompleted (
+CREATE TABLE ProgressCompleted (
   SCID INT AUTO_INCREMENT,
   UID INT NOT NULL,
   SMID INT NOT NULL,
