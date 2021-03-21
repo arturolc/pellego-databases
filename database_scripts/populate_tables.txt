@@ -7,24 +7,21 @@ INSERT INTO Users (Name, Email) VALUES("Chris Bordoy", "Chris.Bordoy@gmail.com")
 INSERT INTO Users (Name, Email) VALUES("Eli Hebdon", "Eli.Hebdon@gmail.com");
 INSERT INTO Users (Name, Email) VALUES("Taylor Swift", "Taylor.Swift@gmail.com");
 
-
 /*Add Learning Modules */
 INSERT INTO LM_Module (Name, Description) VALUES ("RSVP", "Rapid Serial Visual Presentation is a method in which individual words are displayed in rapid succession. The words are fixed to the same point on the screen which eliminates the need for saccades. This means your eyes can remain fixed while the words change.");
-INSERT INTO LM_Module (Name, Description) VALUES('Meta Guiding', 'Meta guiding is the visual guiding of the eye using a finger or pointer, such as a pen, in order for the eye to move faster along the length of a passage of text. It involves drawing invisible shapes on a page of text in order to broaden the visual span for speed reading.');
+INSERT INTO LM_Module (Name, Description) VALUES ('Meta Guiding', 'Meta guiding is the visual guiding of the eye using a finger or pointer, such as a pen, in order for the eye to move faster along the length of a passage of text. It involves drawing invisible shapes on a page of text in order to broaden the visual span for speed reading.');
 
 /*Add RSVP Intro Slides*/
-INSERT INTO LM_Intro (MID, Header, Content) VALUES (
-((select MID from LM_Module where Name='RSVP'), "What is RSVP?", "RSVP stands for Rapid Serial Visual Presentation and it is a scientific method for studying the timing of vision."),
-((select MID from LM_Module where Name='RSVP'), "What does RSVP allow?", "RSVP allows for the reading of unlimited text in a limited position. It allows readers to obtain a maximum reading rate through the ability to adjust text size and eliminate space by displaying one item at a time."),
-((select MID from LM_Module where Name='RSVP'), "How does RSVP help?", "RSVP helps increase reading speed by forcing the reader to stop reading out loud inside their head and suppresses the tendency for eyes to backtrack the line while reading and searching for the end of the sentence."),
-((select MID from LM_Module where Name='RSVP'), "How is RSVP utilized?", "RSVP is being utilized for research in the fields of visual impairment, dyslexia, perceptual and cognitive psychology.");
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='RSVP'), "What is RSVP?", "RSVP stands for Rapid Serial Visual Presentation and it is a scientific method for studying the timing of vision."),
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='RSVP'), "What does RSVP allow?", "RSVP allows for the reading of unlimited text in a limited position. It allows readers to obtain a maximum reading rate through the ability to adjust text size and eliminate space by displaying one item at a time."),
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='RSVP'), "How does RSVP help?", "RSVP helps increase reading speed by forcing the reader to stop reading out loud inside their head and suppresses the tendency for eyes to backtrack the line while reading and searching for the end of the sentence."),
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='RSVP'), "How is RSVP utilized?", "RSVP is being utilized for research in the fields of visual impairment, dyslexia, perceptual and cognitive psychology.");
 
 /*Add Meta-Guiding Intro Slides*/
-INSERT INTO LM_Intro (MID, Header, Content) VALUES (
-((select MID from LM_Module where Name='Meta Guiding'), "What is Meta Guiding?", "Meta guiding stands for Rapid Serial Visual Presentation and it is a scientific method for studying the timing of vision."),
-((select MID from LM_Module where Name='Meta Guiding'), "What does Meta Guiding allow?", "Meta guiding allows for the reading of unlimited text in a limited position. It allows readers to obtain a maximum reading rate through the ability to adjust text size and eliminate space by displaying one item at a time."),
-((select MID from LM_Module where Name='Meta Guiding'), "How does Meta Guiding help?", "Meta guiding helps increase reading speed by forcing the reader to stop reading out loud inside their head and suppresses the tendency for eyes to backtrack the line while reading and searching for the end of the sentence."),
-((select MID from LM_Module where Name='Meta Guiding'), "How is Meta Guiding utilized?", "Meta guiding is being utilized for research in the fields of visual impairment, dyslexia, perceptual and cognitive psychology.");
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Meta Guiding'), "What is Meta Guiding?", "Meta guiding stands for Rapid Serial Visual Presentation and it is a scientific method for studying the timing of vision."),
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Meta Guiding'), "What does Meta Guiding allow?", "Meta guiding allows for the reading of unlimited text in a limited position. It allows readers to obtain a maximum reading rate through the ability to adjust text size and eliminate space by displaying one item at a time."),
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Meta Guiding'), "How does Meta Guiding help?", "Meta guiding helps increase reading speed by forcing the reader to stop reading out loud inside their head and suppresses the tendency for eyes to backtrack the line while reading and searching for the end of the sentence."),
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Meta Guiding'), "How is Meta Guiding utilized?", "Meta guiding is being utilized for research in the fields of visual impairment, dyslexia, perceptual and cognitive psychology.");
 
 /*Add Levels to Submodules */
 
