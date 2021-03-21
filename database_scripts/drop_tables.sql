@@ -8,9 +8,9 @@ Use pellego_database;
    DROP TABLE Intro_Status;
    DROP TABLE LM_Intro;
    Drop TABLE Library;
-   DROP TABLE Users;
    DROP TABLE ProgressCompleted;
    DROP TABLE LM_Submodule;
    DROP TABLE LM_Module;
    DROP TABLE Books;
+   DROP TABLE Users;
    
