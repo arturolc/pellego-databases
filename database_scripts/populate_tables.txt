@@ -11,13 +11,13 @@ INSERT INTO Users (Name, Email) VALUES("Taylor Swift", "Taylor.Swift@gmail.com")
 INSERT INTO LM_Module (Name, Description, Icon) 
 VALUES (
     "RSVP", 
-    "Rapid Serial Visual Presentation is a method in which individual words are displayed in rapid succession. The words are fixed to the same point on the screen which eliminates the need for saccades. This means your eyes can remain fixed while the words change."
+    "Rapid Serial Visual Presentation is a method in which individual words are displayed in rapid succession. The words are fixed to the same point on the screen which eliminates the need for saccades. This means your eyes can remain fixed while the words change.",
     "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_rsvp.png");
 
 INSERT INTO LM_Module (Name, Description, Icon) 
 VALUES (
     'Meta Guiding', 
-    'Meta guiding is the visual guiding of the eye using a finger or pointer, such as a pen, in order for the eye to move faster along the length of a passage of text. It involves drawing invisible shapes on a page of text in order to broaden the visual span for speed reading.'
+    'Meta guiding is the visual guiding of the eye using a finger or pointer, such as a pen, in order for the eye to move faster along the length of a passage of text. It involves drawing invisible shapes on a page of text in order to broaden the visual span for speed reading.',
     "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_meta_guiding.png");
 
 /*Add RSVP Intro Slides*/
