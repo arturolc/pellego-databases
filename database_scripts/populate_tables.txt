@@ -138,7 +138,7 @@ INSERT INTO LM_Quiz (SMID) VALUES (3);
 INSERT INTO Questions (SMID, Question) VALUES (1, "What city did the storyteller go to for their summer vacation?");
 INSERT INTO Questions (SMID, Question) VALUES (1, "How long was the summer vacation?");
 INSERT INTO Questions (SMID, Question) VALUES (1, "What did their hotel room have?");
-INSERT INTO Questions (SMID, Question) VALUES (1, "Who were the best friends in the story?")
+INSERT INTO Questions (SMID, Question) VALUES (1, "Who were the best friends in the story?");
 
 INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 1, "Louvre", false);
 INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 1, "Latin", false);
