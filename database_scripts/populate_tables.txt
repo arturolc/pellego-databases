@@ -59,9 +59,7 @@ INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module w
 
 INSERT INTO LM_Submodule (MID, Name, Subheader, Text) VALUES ((select MID from LM_Module where Name='Rapid Serial Visual Presentation'), "Intro", "Learn the Benefits", NULL);
 
-INSERT INTO LM_Submodule (MID, Name, Subheader, Text) VALUES ((select MID from LM_Module where Name='Rapid Serial Visual Presentation'), "Beginner", "Demonstrate Basic Skills", "I just returned from the greatest summer vacation in Paris, France! I spent eight days
-        there with my best friends, Henry and Steve. We visited many famous tourist places and my favorite was the Louvre,
-        a well-known museum.");
+INSERT INTO LM_Submodule (MID, Name, Subheader, Text) VALUES ((select MID from LM_Module where Name='Rapid Serial Visual Presentation'), "Beginner", "Demonstrate Basic Skills", "I just returned from the greatest summer vacation in Paris, France! I spent eight days there with my best friends, Henry and Steve. We visited many famous tourist places and my favorite was the Louvre, a well-known museum.");
 
 INSERT INTO LM_Submodule (MID, Name, Subheader, Text) VALUES ((select MID from LM_Module where Name='Rapid Serial Visual Presentation'), "Intermediate", "Show Some Improvement", "Keith recently came back from a trip to Chicago, Illinois. This midwestern metropolis is found along the shore of Lake Michigan. During his visit, Keith spent a lot of time exploring the city to visit important landmarks and monuments.
 Keith loves baseball, and he made sure to take a visit to Wrigley Field. Not only did he take a tour of this spectacular stadium, but he also got to watch a Chicago Cubs game. In the stadium, Keith and the other fans cheered for the Cubs. Keith was happy that the Cubs won with a score of 5-4.
