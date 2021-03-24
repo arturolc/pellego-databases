@@ -56,6 +56,7 @@ CREATE TABLE Answers
 (
 AID int AUTO_INCREMENT,
 Question int,
+Answer Text(65535),
 Correct Boolean,
 Primary Key(AID),
 Foreign Key (Question) References Questions(QUID)
