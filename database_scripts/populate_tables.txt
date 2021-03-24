@@ -131,7 +131,34 @@ VALUES (
     "https://pellego-library.s3-us-west-1.amazonaws.com/covey-7-habits.png"
 );
 
+INSERT INTO LM_Quiz (SMID) VALUES (1);
+INSERT INTO LM_Quiz (SMID) VALUES (2);
+INSERT INTO LM_Quiz (SMID) VALUES (3);
 
+INSERT INTO Questions (SMID, Question) VALUES (1, "What city did the storyteller go to for their summer vacation?");
+INSERT INTO Questions (SMID, Question) VALUES (1, "How long was the summer vacation?");
+INSERT INTO Questions (SMID, Question) VALUES (1, "What did their hotel room have?");
+INSERT INTO Questions (SMID, Question) VALUES (1, "Who were the best friends in the story?")
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 1, "Louvre", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 1, "Latin", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 1, "Paris", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 1, "Lyon", false);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 2, "One week", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 2, "Eight days", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 2, "Two weeks", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 2, "Eight weeks", false);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 3, "A balcony", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 3, "A bottle of wine", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 3, "A view of the metro", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 3, "A refrigerator", false);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 4, "Jim and Pam", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 4, "Simon and Garfunkel", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 4, "Amy and Rose", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES (1, 4, "Henry and Steve", true);
 
 
 
