@@ -60,7 +60,7 @@ QUID int,
 Answer Text(65535),
 Correct Boolean,
 Primary Key(AID),
-Foreign Key (Question) References Questions(QUID)
+Foreign Key (QUID) References Questions(QUID)
 );
 
 CREATE TABLE Scores
