@@ -46,16 +46,17 @@ Foreign Key (SMID) References LM_Submodule(SMID)
 CREATE TABLE Questions
 (
 QUID int AUTO_INCREMENT,
-Quiz_ID int,
+SMID int,
 Question TEXT(65535),
 Primary Key(QUID),
-Foreign Key (Quiz_ID) References LM_Quiz(QID)
+Foreign Key (SMID) References LM_Quiz(QID)
 );
 
 CREATE TABLE Answers
 (
 AID int AUTO_INCREMENT,
-Question int,
+SMID int,
+QUID int,
 Answer Text(65535),
 Correct Boolean,
 Primary Key(AID),
