@@ -35,21 +35,13 @@ Primary Key (SMID),
 Foreign Key (MID) References LM_Module(MID)
 );
 
-
-CREATE TABLE LM_Quiz (
-QID int AUTO_INCREMENT,
-SMID int,
-Primary Key (QID),
-Foreign Key (SMID) References LM_Submodule(SMID)
-);
-
 CREATE TABLE Questions
 (
 QUID int AUTO_INCREMENT,
 SMID int,
 Question TEXT(65535),
 Primary Key(QUID),
-Foreign Key (SMID) References LM_Quiz(QID)
+Foreign Key (SMID) References LM_Submodule(SMID)
 );
 
 CREATE TABLE Answers
