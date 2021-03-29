@@ -136,10 +136,15 @@ INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule wh
 INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Beginner"), "What did their hotel room have?");
 INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Beginner"), "Who were the best friends in the story?");
 
-INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), "The tone of the author can best be described as:");
-INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), "In paragraph 3, the author finds starvation and dehydration induced euthanasia is to be 'more insidious' because:");
-INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), "The author maintains that death by withholding care is:");
-INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), "In the final paragraph the author writes, 'Despite the ravages of their diseases, they are still our fellow human beings and deserve our care and respect.' The main purpose of this statement is to:");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), "The primary purpose of the passage is to:");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), "Based on information in the passage, it can be inferred that all of the following contributed to the disuse of the Iditarod Trail except:");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), "As used in paragraph 2, which is the best definition for mode?");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), "According to the passage, the initial Iditarod race:");
+
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Advanced"), "The tone of the author can best be described as:");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Advanced"), "In paragraph 3, the author finds starvation and dehydration induced euthanasia is to be 'more insidious' because:");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Advanced"), "The author maintains that death by withholding care is:");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Advanced"), "In the final paragraph the author writes, 'Despite the ravages of their diseases, they are still our fellow human beings and deserve our care and respect.' The main purpose of this statement is to:");
 
 INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Beginner"), (select QUID from Questions LIMIT 1), "Louvre", false);
 INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Beginner"), (select QUID from Questions LIMIT 1), "Latin", false);
@@ -181,19 +186,22 @@ INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Su
 INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 7,1), "Ended at the ghost town of Iditarod", false);
 INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 7,1), "Boasted a total of 400 entrants", false);
 
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 8,1), "Pleading", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 8,1), "Argumentative", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 8,1), "Compassionate", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 8,1), "Emphatic", false);
 
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 9,1), "Euthanasia is legally considered to be a criminal act", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 9,1), "The public’s attitude toward euthanasia is becoming more positive", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 9,1), "It often involves those who cannot protest", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 9,1), "The patient has asked to die with dignity", false);
 
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 10,1), "Largely confined to hospital", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 10,1), "Often requested by family members", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 10,1), "Largely confined to the terminally ill", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 10,1), "Approved by living wills", false);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 11,1), "Prove a previous argument", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 11,1), "Illustrate an example", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 11,1), "Gainsay a later statement", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Rapid Serial Visual Presentation') && Name="Intermediate"), (select QUID from Questions order by QUID LIMIT 11,1), "Justify an earlier statement", true);
