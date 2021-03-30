@@ -12,7 +12,6 @@ MID int AUTO_INCREMENT,
 Name varchar(255) NOT NULL,
 Subheader varchar(255) NOT NULL,
 Description TEXT(65535),
-Complete int NOT NULL,
 Icon varchar(255) NOT NULL,
 PRIMARY KEY (MID)
 );
