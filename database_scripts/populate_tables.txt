@@ -16,7 +16,7 @@ VALUES (
     0,
     "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_rsvp.png");
 
-INSERT INTO LM_Module (Name, Subheader, Description, Icon)
+INSERT INTO LM_Module (Name, Subheader, Description, Complete, Icon)
 VALUES (
     "Clump Reading",
     "Words grouped together in chunks",
@@ -24,7 +24,7 @@ VALUES (
     0,
     "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_clump_reading.png");
 
-INSERT INTO LM_Module (Name, Subheader, Description, Icon)
+INSERT INTO LM_Module (Name, Subheader, Description, Complete, Icon)
 VALUES (
     "Reducing Subvocalization",
     "Eliminate the habit of subvocalization",
@@ -32,7 +32,7 @@ VALUES (
     0,
     "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_reducing_subvocalization.png");
 
-INSERT INTO LM_Module (Name, Subheader, Description, Icon) 
+INSERT INTO LM_Module (Name, Subheader, Description, Complete, Icon)
 VALUES (
     'Meta Guiding', 
     "Smooth moving line beneath text",    
@@ -40,7 +40,7 @@ VALUES (
     0,
     "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_meta_guiding.png");
 
-INSERT INTO LM_Module (Name, Subheader, Description, Icon)
+INSERT INTO LM_Module (Name, Subheader, Description, Complete, Icon)
 VALUES (
     "Pre-Reading",
     "Scan text to prep your brain",
