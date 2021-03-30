@@ -8,11 +8,12 @@ INSERT INTO Users (Name, Email) VALUES("Eli Hebdon", "Eli.Hebdon@gmail.com");
 INSERT INTO Users (Name, Email) VALUES("Taylor Swift", "Taylor.Swift@gmail.com");
 
 /*Add Learning Modules */
-INSERT INTO LM_Module (Name, Subheader, Description, Icon) 
+INSERT INTO LM_Module (Name, Subheader, Description, Complete, Icon)
 VALUES (
     "Rapid Serial Visual Presentation",
     "Individual words in rapid succession",
     "Rapid Serial Visual Presentation is a method in which individual words are displayed in rapid succession. The words are fixed to the same point on the screen which eliminates the need for saccades. This means your eyes can remain fixed while the words change.",
+    0,
     "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_rsvp.png");
 
 INSERT INTO LM_Module (Name, Subheader, Description, Icon)
@@ -20,6 +21,7 @@ VALUES (
     "Clump Reading",
     "Words grouped together in chunks",
     "sample text",
+    0,
     "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_clump_reading.png");
 
 INSERT INTO LM_Module (Name, Subheader, Description, Icon)
@@ -27,6 +29,7 @@ VALUES (
     "Reducing Subvocalization",
     "Eliminate the habit of subvocalization",
     "sample text",
+    0,
     "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_reducing_subvocalization.png");
 
 INSERT INTO LM_Module (Name, Subheader, Description, Icon) 
@@ -34,6 +37,7 @@ VALUES (
     'Meta Guiding', 
     "Smooth moving line beneath text",    
     'Meta guiding is the visual guiding of the eye using a finger or pointer, such as a pen, in order for the eye to move faster along the length of a passage of text. It involves drawing invisible shapes on a page of text in order to broaden the visual span for speed reading.',
+    0,
     "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_meta_guiding.png");
 
 INSERT INTO LM_Module (Name, Subheader, Description, Icon)
@@ -41,6 +45,7 @@ VALUES (
     "Pre-Reading",
     "Scan text to prep your brain",
     "sample text",
+    0,
     "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_pre_reading.png");
 
 /*Add RSVP Intro Slides*/
