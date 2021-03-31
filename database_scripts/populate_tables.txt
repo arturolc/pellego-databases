@@ -17,6 +17,13 @@ VALUES (
 
 INSERT INTO LM_Module (Name, Subheader, Description, Icon)
 VALUES (
+    'Meta Guiding',
+    "Smooth moving line beneath text",
+    'Meta guiding is the visual guiding of the eye using a finger or pointer, such as a pen, in order for the eye to move faster along the length of a passage of text. It involves drawing invisible shapes on a page of text in order to broaden the visual span for speed reading.',
+    "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_meta_guiding.png");
+
+INSERT INTO LM_Module (Name, Subheader, Description, Icon)
+VALUES (
     "Clump Reading",
     "Words grouped together in chunks",
     "sample text",
@@ -28,13 +35,6 @@ VALUES (
     "Eliminate the habit of subvocalization",
     "sample text",
     "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_reducing_subvocalization.png");
-
-INSERT INTO LM_Module (Name, Subheader, Description, Icon)
-VALUES (
-    'Meta Guiding', 
-    "Smooth moving line beneath text",    
-    'Meta guiding is the visual guiding of the eye using a finger or pointer, such as a pen, in order for the eye to move faster along the length of a passage of text. It involves drawing invisible shapes on a page of text in order to broaden the visual span for speed reading.',
-    "https://pellego-modules.s3-us-west-2.amazonaws.com/ic_meta_guiding.png");
 
 INSERT INTO LM_Module (Name, Subheader, Description, Icon)
 VALUES (
