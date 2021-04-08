@@ -92,6 +92,16 @@ Primary Key (WPMID),
 Foreign Key (User) References Users(UID)
 );
 
+CREATE TABLE User_Word_Values (
+  uwID int NOT NULL AUTO_INCREMENT,
+  UID int NOT NULL,
+  WordsRead int NOT NULL,
+  WPM int NOT NULL,
+  Recorded Date,
+  Primary Key (uwID),
+  Foreign Key (UID) References Users(UID)
+);
+
 Create TABLE User_Analytics (
   AID int AUTO_INCREMENT,
   UID int NOT NULL,
