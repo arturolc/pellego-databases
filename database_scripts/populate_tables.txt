@@ -313,13 +313,15 @@ INSERT INTO Books (
     Author,
     Synopsis,
     Book_Url,
-    Image_Url)
+    Image_Url,
+    Hash_String)
 VALUES (
     "Harry Potter and the Sorcerer Stone",
     "J. K. Rowling",
     "Harry Potter has no idea how famous he is. That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's really a wizard, just as his parents were. But everything changes when Harry is summoned to attend an infamous school for wizards, and he begins to discover some clues about his illustrious birthright. From the surprising way he is greeted by a lovable giant, to the unique curriculum and colorful faculty at his unusual school, Harry finds himself drawn deep inside a mystical world he never knew existed and closer to his own noble destiny.",
     "https://pellego-library.s3-us-west-1.amazonaws.com/hp1/hp1.pdf",
-    "https://pellego-library.s3-us-west-1.amazonaws.com/hp1/hp1.png"
+    "https://pellego-library.s3-us-west-1.amazonaws.com/hp1/hp1.png",
+    "4355e5f75e6a361c9ee7c7cf322dab73"
 );
 
 INSERT INTO Books (
@@ -327,11 +329,13 @@ INSERT INTO Books (
     Author,
     Synopsis,
     Book_Url,
-    Image_Url)
+    Image_Url,
+    Hash_String)
 VALUES (
     "The 7 Habits of Highly Effective People",
     "Stephen R. Covey",
     "In The 7 Habits of Highly Effective People, author Stephen R. Covey presents a holistic, integrated, principle-centered approach for solving personal and professional problems. With penetrating insights and pointed anecdotes, Covey reveals a step-by-step pathway for living with fairness, integrity, service, and human dignity--principles that give us the security to adapt to change and the wisdom and power to take advantage of the opportunities that change creates.",
     "https://pellego-library.s3-us-west-1.amazonaws.com/covey.pdf",
-    "https://pellego-library.s3-us-west-1.amazonaws.com/covey-7-habits.png"
+    "https://pellego-library.s3-us-west-1.amazonaws.com/covey-7-habits.png",
+    "39c64ae934cfdbf152872cd2e6657114
 );
