@@ -92,6 +92,16 @@ Primary Key (WPMID),
 Foreign Key (User) References Users(UID)
 );
 
+CREATE TABLE User_Word_Values (
+  uwID int NOT NULL AUTO_INCREMENT,
+  UID int NOT NULL,
+  WordsRead int NOT NULL,
+  WPM int NOT NULL,
+  Recorded Date,
+  Primary Key (uwID),
+  Foreign Key (UID) References Users(UID)
+);
+
 Create TABLE User_Analytics (
   AID int AUTO_INCREMENT,
   UID int NOT NULL,
@@ -121,10 +131,11 @@ Create TABLE Library (
 );
 
 CREATE TABLE ProgressCompleted (
-  SCID INT AUTO_INCREMENT,
   UID INT NOT NULL,
+  MID INT NOT NULL,
   SMID INT NOT NULL,
-  PRIMARY KEY (SCID),
+  PRIMARY KEY (UID, MID, SMID),
   FOREIGN KEY (UID) REFERENCES Users(UID),
+  FOREIGN KEY (MID) REFERENCES LM_Module(MID),
   FOREIGN KEY (SMID) REFERENCES LM_Submodule(SMID)
 );
