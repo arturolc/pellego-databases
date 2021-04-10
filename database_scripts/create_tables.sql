@@ -108,6 +108,7 @@ CREATE TABLE Books (
     Synopsis mediumtext NOT NULL,
     Book_Url varchar(255) NOT NULL,
     Image_Url varchar(255) NOT NULL,
+    Hash_String varchar(32) NOT NULL,
     PRIMARY KEY(BID));
 
 Create TABLE Library (
