@@ -48,8 +48,9 @@ INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module w
 INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Meta Guiding'), "How does Meta Guiding help?", "Meta guiding helps our brains generate ‘markers’ as we read, so we don’t have go back and reread. By generating these markers and eliminating the need to reread, we can make our eyes move faster as we read.");
 
 /*Add Clump Reading Intro Slides*/
-INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Clump Reading'), "What is Clump Reading?", "...");
-INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Clump Reading'), "How does Clump Reading help?", "");
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Clump Reading'), "What is Clump Reading?", "Clump reading means taking in more than one word at a time when you read – reading in clumps. A clump is a collection of 4 to 16 adjacent words.");
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Clump Reading'), "How does Clump Reading Work?", "You can read in clumps by utilizing your peripheral vision. So, instead of reading individual words at once, like “I - am - going - to - the - store” you read the clump “I am going to the store”, specifically focusing on the center word in the clump.");
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Clump Reading'), "Benefits of Clump Reading", "When you read in clumps, you naturally increase your speed because you can’t slow down to vocalize (speak or hear the words as you read them). Additionally, when you read one word at a time your eyes are constantly moving back and forth, causing fatigue. When you read in clumps your eye fixations are reduced, allowing you to read faster and for longer.");
 
 
 /*Add Pre-Reading Intro Slides*/
