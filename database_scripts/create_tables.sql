@@ -35,13 +35,6 @@ Primary Key (SMID),
 Foreign Key (MID) References LM_Module(MID)
 );
 
-CREATE TABLE LM_Quiz (
-QID int AUTO_INCREMENT,
-SMID int,
-Primary Key (QID),
-Foreign Key (SMID) References LM_Submodule(SMID)
-);
-
 CREATE TABLE Questions
 (
 QUID int AUTO_INCREMENT,
@@ -83,15 +76,6 @@ Foreign Key(UID) References Users (UID),
 Foreign Key (Intro) References LM_Intro (IID)
 );
 
-CREATE TABLE Average_WPM_History
-(
-WPMID int AUTO_INCREMENT,
-User int,
-Day DateTime,
-Primary Key (WPMID),
-Foreign Key (User) References Users(UID)
-);
-
 CREATE TABLE User_Word_Values (
   uwID int NOT NULL AUTO_INCREMENT,
   UID int NOT NULL,
@@ -102,14 +86,6 @@ CREATE TABLE User_Word_Values (
   Foreign Key (UID) References Users(UID)
 );
 
-Create TABLE User_Analytics (
-  AID int AUTO_INCREMENT,
-  UID int NOT NULL,
-  WordsReadToDate int,
-  Joined Datetime,
-  Primary Key(AID),
-  Foreign Key (UID) References Users(UID)
-  );
 
 CREATE TABLE Books (
     BID int AUTO_INCREMENT,
