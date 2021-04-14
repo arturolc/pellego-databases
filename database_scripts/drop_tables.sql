@@ -12,5 +12,6 @@ Use pellego_database;
    DROP TABLE LM_Submodule;
    DROP TABLE LM_Module;
    DROP TABLE Books;
+   DROP TABLE User_Word_Values;
    DROP TABLE Users;
    

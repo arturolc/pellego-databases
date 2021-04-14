@@ -45,11 +45,12 @@ INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module w
 /*Add Meta-Guiding Intro Slides*/
 /* Intro taken from this page: https://psychology.wikia.org/wiki/Meta_guiding" and https://www.keytostudy.com/metaguiding/ */
 INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Meta Guiding'), "What is Meta Guiding?", "Meta guiding is the visual guiding of the eye using a finger or pointer, such as a pen, in order for the eye to move faster along the length of a passage of text. It involves drawing invisible shapes on a page of text in order to broaden the visual span for speed reading");
-INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Meta Guiding'), "How does Meta Guiding help?", "As children, we often read while putting our finder under each word we read. As we got older, we no longer had to do that. Meta guiding revives this practice to help our brains generate ‘markers’ as we read, so we don’t have go back and reread. By generating these markers and eliminating the need to reread, we can make our eyes move faster as we read.");
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Meta Guiding'), "How does Meta Guiding help?", "Meta guiding helps our brains generate ‘markers’ as we read, so we don’t have go back and reread. By generating these markers and eliminating the need to reread, we can make our eyes move faster as we read.");
 
 /*Add Clump Reading Intro Slides*/
-INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Clump Reading'), "What is Clump Reading?", "...");
-INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Clump Reading'), "How does Clump Reading help?", "");
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Clump Reading'), "What is Clump Reading?", "Clump reading means taking in more than one word at a time when you read – reading in clumps. A clump is a collection of 4 to 16 adjacent words.");
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Clump Reading'), "How does Clump Reading Work?", "You can read in clumps by utilizing your peripheral vision. So, instead of reading individual words at once, like “I - am - going - to - the - store” you read the clump “I am going to the store”, specifically focusing on the center word in the clump.");
+INSERT INTO LM_Intro (MID, Header, Content) VALUES ((select MID from LM_Module where Name='Clump Reading'), "Benefits", "When you read in clumps, you naturally increase your speed because you can’t slow down to vocalize (speak or hear the words as you read them). Additionally, when you read one word at a time your eyes are constantly moving back and forth, causing fatigue. When you read in clumps your eye fixations are reduced, allowing you to read faster and for longer.");
 
 
 /*Add Pre-Reading Intro Slides*/
@@ -289,6 +290,87 @@ INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Su
 INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Meta Guiding') && Name="Advanced"), (select QUID from Questions LIMIT 23,1), "Venerates", false);
 INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Meta Guiding') && Name="Advanced"), (select QUID from Questions LIMIT 23,1), "Mollifies", false);
 
+
+/*Clump Reading*/
+/*Beginner questions */
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), "What is the class that Lucas' teacher tells him he is a good pupil?");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), "Who is the person that checks on the students during lunch to make sure that all the students are well behaved?");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), "In Which class does Lucas have a hard time staying awake?");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), "What is Lucas' favorite class?");
+
+/*Intermediate questions */
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), "Which is not a popular reason that tourists come to New York City?");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), "The Empire State Building has been featured in more than how many films?");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), "Why was Matthew excited for his trip to the Empire State Building?");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), "Which is not a landmark that Matthew clearly viewed from the observatory??");
+
+
+/*Advanced questions */
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), "When did John travel to Las Vegas?");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), "Which best desribes the purpose of the Las Vegas Strip?");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), "Why did John like his visit to the Grand Canyon?");
+INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), "What does it mean that Las Vegas is a 'city that never sleeps?'");
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 24,1), "Math", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 24,1), "English", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 24,1), "Gym", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 24,1), "History", false);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 25,1), "Headmaster/Principal", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 25,1), "Kyle", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 25,1), "Teacher", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 25,1), "Classmate", false);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 26,1), "Math", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 26,1), "English", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 26,1), "Gym", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 26,1), "History", true);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 27,1), "Math", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 27,1), "History", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 27,1), "Science", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Beginner"), (select QUID from Questions LIMIT 27,1), "Art", true);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 28,1), "Shopping", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 28,1), "Sightseeing", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 28,1), "Watching performances", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 28,1), "Relaxing on the beach", true);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 29,1), "1931", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 29,1), "102", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 29,1), "90", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 29,1), "86", false);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 30,1), "He works as a photographer of city skylines", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 30,1), "He had never been to a city before", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 30,1), "He received a free ticket to the rooftop observatories", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 30,1), "He appreciates architecture and historical buildings", true);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 31,1), "The Statue of Libery", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 31,1), "JFK Internationl Airport", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 31,1), "The Brooklyn Bridge", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 31,1), "Times Square", false);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 32,1), "Yesterday", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 32,1), "Last Summer", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 32,1), "Last Spring", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 32,1), "Last Weekend", false);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 33,1), "It is a 2.5 mile stretch", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 33,1), "It offers a lot of activities for tourists", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 33,1), "It keeps tourists safe", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 33,1), "There are too many neon lights", false);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 34,1), "The setting was very different from downtown Las Vegas", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 34,1), "John does not enjoy spending time in cities", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 34,1), "It is one of the Seven Natural Wonders of the World", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 34,1), "The Grand Canyon offers a breathtaking view", false);
+
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 35,1), "Las Vegas offers exciting activities at all hours", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 35,1), "A lot of people there have sleep disorders", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 35,1), "The neon lights keep people awake at night", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Clump Reading') && Name="Advanced"), (select QUID from Questions LIMIT 35,1), "There is too much noise there for people to sleep", false);
+
 /* Pre-Reading */
 INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), "It is pointed out in the reading that opera ----.");
 INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), "We can understand from the reading that ----.");
@@ -302,50 +384,50 @@ INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule wh
 INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), "It is clear from the passage that the survivors of the accident ----.");
 INSERT INTO Questions (SMID, Question) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), "According to the passage, when the Estonia sank, ----.");
 
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 12,1), "has developed under the influence of musical theater", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 12,1), "is a drama sung with the accompaniment of an orchestra", true);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 12,1), "is not a high-budget production", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 12,1), "is often performed in Europe", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 36,1), "has developed under the influence of musical theater", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 36,1), "is a drama sung with the accompaniment of an orchestra", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 36,1), "is not a high-budget production", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 36,1), "is often performed in Europe", false);
 
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 13,1), "people are captivated more by opera than musical theater", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 13,1), "drama in opera is more important than the music", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 13,1), "orchestras in operas can vary considerably in size", true);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 13,1), "musical theater relies above all on music", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 37,1), "people are captivated more by opera than musical theater", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 37,1), "drama in opera is more important than the music", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 37,1), "orchestras in operas can vary considerably in size", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 37,1), "musical theater relies above all on music", false);
 
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 14,1), "acting and costumes are secondary to music in musical theater", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 14,1), "many people find musical theater more captivating than opera", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 14,1), "music in musical theater is not as important as it is in opera", true);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 14,1), "an opera requires a huge orchestra as well as a large choir", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 38,1), "acting and costumes are secondary to music in musical theater", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 38,1), "many people find musical theater more captivating than opera", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 38,1), "music in musical theater is not as important as it is in opera", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Beginner"), (select QUID from Questions LIMIT 38,1), "an opera requires a huge orchestra as well as a large choir", false);
 
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 16,1), "don't want to be with us as much as we want to be with them", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 16,1), "are proven to be less intelligent than once thought", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 16,1), "have a reputation for being friendly to humans", true);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 16,1), "are the most powerful creatures that live in the oceans", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 39,1), "don't want to be with us as much as we want to be with them", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 39,1), "are proven to be less intelligent than once thought", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 39,1), "have a reputation for being friendly to humans", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 39,1), "are the most powerful creatures that live in the oceans", false);
 
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 17,1), "means that they are better adapted to their environment than we are", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 17,1), "shows that dolphins have a very sophisticated form of communication", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 17,1), "proves that dolphins are not the most intelligent species at sea", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 17,1), "does not mean that we are superior to them", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 40,1), "means that they are better adapted to their environment than we are", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 40,1), "shows that dolphins have a very sophisticated form of communication", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 40,1), "proves that dolphins are not the most intelligent species at sea", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 40,1), "does not mean that we are superior to them", true);
 
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 18,1), "dolphins have some social traits that are similar to those of humans", true);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 18,1), "communication is the most fascinating aspect of the dolphins", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 18,1), "dolphins have skills that no other living creatures have such as the ability to think", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 18,1), "it is not usual for dolphins to communicate with each other", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 41,1), "dolphins have some social traits that are similar to those of humans", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 41,1), "communication is the most fascinating aspect of the dolphins", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 41,1), "dolphins have skills that no other living creatures have such as the ability to think", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Intermediate"), (select QUID from Questions LIMIT 41,1), "it is not usual for dolphins to communicate with each other", false);
 
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 20,1), "the lifesaving equipment did not work well and lifeboats could not be lowered", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 20,1), "most victims were trapped inside the boat as they were in their cabins", true);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 20,1), "139 people managed to leave the vessel but died in freezing water", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 20,1), "naval architects claimed that the Estonia was unsinkable", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 42,1), "the lifesaving equipment did not work well and lifeboats could not be lowered", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 42,1), "most victims were trapped inside the boat as they were in their cabins", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 42,1), "139 people managed to leave the vessel but died in freezing water", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 42,1), "naval architects claimed that the Estonia was unsinkable", false);
 
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 21,1), "helped one another to overcome the tragedy that had affected them all", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 21,1), "were mostly young men but women, children and the elderly stood little chance", true);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 21,1), "helped save hundreds of lives", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 21,1), "helped save hundreds of lives", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 43,1), "helped one another to overcome the tragedy that had affected them all", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 43,1), "were mostly young men but women, children and the elderly stood little chance", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 43,1), "helped save hundreds of lives", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 43,1), "helped save hundreds of lives", false);
 
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 22,1), "there were only 139 passengers on board", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 22,1), "few of the passengers were asleep", false);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 22,1), "there were enough lifeboats for the number of people on board", true);
-INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 22,1), "faster reaction by the crew could have increased the Estonia's chances of survival", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 44,1), "there were only 139 passengers on board", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 44,1), "few of the passengers were asleep", false);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 44,1), "there were enough lifeboats for the number of people on board", true);
+INSERT INTO Answers(SMID, QUID, Answer, Correct) VALUES ((select SMID from LM_Submodule where MID=(select MID from LM_Module where Name='Pre-Reading') && Name="Advanced"), (select QUID from Questions LIMIT 44,1), "faster reaction by the crew could have increased the Estonia's chances of survival", false);
 
 /* Pellego Library */
 INSERT INTO Books (
@@ -379,3 +461,28 @@ VALUES (
     "https://pellego-library.s3-us-west-1.amazonaws.com/covey-7-habits.png",
     "39c64ae934cfdbf152872cd2e6657114"
 );
+
+/*Mock data for Today Values for Progress Reports*/
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 478, 250, now());
+
+/*Mock data for Last Week Values for Progress Reports*/
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 880, 540, date_sub(now(), Interval 1 day));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 600, 230, date_sub(now(), Interval 2 day));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 550, 297, date_sub(now(), Interval 3 day));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 533, 89, date_sub(now(), Interval 4 day));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 620, 444, date_sub(now(), Interval 5 day));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 420, 120, date_sub(now(), Interval 6 day));
+
+/*Mock data for Last Year Values for Progress Reports*/
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 233, 100, date_sub(now(), Interval 1 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 300, 120, date_sub(now(), Interval 2 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 450, 140, date_sub(now(), Interval 3 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 500, 150, date_sub(now(), Interval 4 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 80, 180, date_sub(now(), Interval 5 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 145, 200, date_sub(now(), Interval 6 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 278, 190, date_sub(now(), Interval 7 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 333, 125, date_sub(now(), Interval 8 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 444, 175, date_sub(now(), Interval 9 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 580, 300, date_sub(now(), Interval 10 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 700, 350, date_sub(now(), Interval 11 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 490, 400, date_sub(now(), Interval 12 month));
