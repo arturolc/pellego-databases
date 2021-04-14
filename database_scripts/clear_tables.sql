@@ -4,7 +4,6 @@ DELETE FROM LM_Intro;
 DELETE FROM Answers;
 DELETE FROM Questions;
 DELETE FROM LM_Submodule;
-DELETE FROM Scores;
 DELETE FROM Intro_Status;
 DELETE FROM Books;
 DELETE FROM Library;

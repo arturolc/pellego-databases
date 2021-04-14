@@ -55,17 +55,6 @@ Primary Key(AID),
 Foreign Key (QUID) References Questions(QUID)
 );
 
-CREATE TABLE Scores
-(
-SID int AUTO_INCREMENT,
-Quiz int,
-User int,
-Date_Taken DateTime,
-Primary Key (SID),
-Foreign Key (Quiz) References LM_Quiz(QID),
-Foreign Key (User) References Users(UID)
-);
-
 CREATE TABLE Intro_Status (
 ISID int AUTO_INCREMENT,
 UID int,
