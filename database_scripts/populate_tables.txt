@@ -463,26 +463,25 @@ VALUES (
 );
 
 /*Mock data for Today Values for Progress Reports*/
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 478, 250, now());
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 1435, 823, now());
 
 /*Mock data for Last Week Values for Progress Reports*/
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 880, 540, date_sub(now(), Interval 1 day));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 600, 230, date_sub(now(), Interval 2 day));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 550, 297, date_sub(now(), Interval 3 day));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 533, 89, date_sub(now(), Interval 4 day));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 620, 444, date_sub(now(), Interval 5 day));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 420, 120, date_sub(now(), Interval 6 day));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 1322, 808, date_sub(now(), Interval 1 day));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 1289, 750, date_sub(now(), Interval 2 day));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 1245, 739, date_sub(now(), Interval 3 day));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 1193, 723, date_sub(now(), Interval 4 day));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 1030, 701, date_sub(now(), Interval 5 day));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 1187, 703, date_sub(now(), Interval 6 day));
 
 /*Mock data for Last Year Values for Progress Reports*/
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 233, 100, date_sub(now(), Interval 1 month));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 300, 120, date_sub(now(), Interval 2 month));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 450, 140, date_sub(now(), Interval 3 month));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 500, 150, date_sub(now(), Interval 4 month));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 80, 180, date_sub(now(), Interval 5 month));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 145, 200, date_sub(now(), Interval 6 month));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 278, 190, date_sub(now(), Interval 7 month));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 333, 125, date_sub(now(), Interval 8 month));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 444, 175, date_sub(now(), Interval 9 month));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 580, 300, date_sub(now(), Interval 10 month));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 700, 350, date_sub(now(), Interval 11 month));
-INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 490, 400, date_sub(now(), Interval 12 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 1118, 689, date_sub(now(), Interval 1 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 1073, 645, date_sub(now(), Interval 2 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 911, 592, date_sub(now(), Interval 3 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 816, 486, date_sub(now(), Interval 4 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 730, 350, date_sub(now(), Interval 5 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 572, 313, date_sub(now(), Interval 6 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 480, 264, date_sub(now(), Interval 7 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 368, 220, date_sub(now(), Interval 8 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 159, 150, date_sub(now(), Interval 9 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 123, 120, date_sub(now(), Interval 10 month));
+INSERT INTO User_Word_Values (UID, WordsRead, WPM, Recorded) VALUES (3, 80, 120, date_sub(now(), Interval 11 month));
