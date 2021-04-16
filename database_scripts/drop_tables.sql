@@ -9,4 +9,5 @@ Use pellego_database;
    DROP TABLE LM_Module;
    DROP TABLE Books;
    DROP TABLE Users;
+   DROP TABLE User_Word_Values;
    
