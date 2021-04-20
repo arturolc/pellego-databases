@@ -1,12 +1,5 @@
 use pellego_database;
 
-/*Add users*/
-INSERT INTO Users (Name, Email) VALUES("Joanna Lowry", "Joanna.Lowry@gmail.com");
-INSERT INTO Users (Name, Email) VALUES("Arturo Lara", "Arturo.Lara@gmail.com");
-INSERT INTO Users (Name, Email) VALUES("Chris Bordoy", "Chris.Bordoy@gmail.com");
-INSERT INTO Users (Name, Email) VALUES("Eli Hebdon", "Eli.Hebdon@gmail.com");
-INSERT INTO Users (Name, Email) VALUES("Taylor Swift", "Taylor.Swift@gmail.com");
-
 /*Add Learning Modules */
 INSERT INTO LM_Module (Name, Subheader, Description, Icon)
 VALUES (
